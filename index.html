@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Mabini, Batangas - Experience pristine beaches, world-class diving, and vibrant local culture</title>
+    <meta name="description" content="Discover Mabini, Batangas with diving spots, beaches, Mt. Gulugod Baboy, and local delicacies.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap');
+        
+        :root {
+            /* Pink Color Scheme */
+            --color-primary: #D81B60;
+            --color-primary-hover: #C2185B;
+            --color-secondary: #F8BBD9;
+            --color-secondary-hover: #F48FB1;
+            --color-tertiary: #EC407A;
+            --color-tertiary-hover: #E91E63;
+            --color-neutral: #FCE4EC;
+            --color-success: #4CAF50;
+            --color-warning: #FF9800;
+            
+            /* Pink Gray scale */
+            --color-gray-50: #FDF2F8;
+            --color-gray-100: #FCE7F3;
+            --color-gray-200: #FBCFE8;
+            --color-gray-300: #F9A8D4;
+            --color-gray-400: #F472B6;
+            --color-gray-500: #EC4899;
+            --color-gray-600: #DB2777;
+            --color-gray-700: #BE185D;
+            --color-gray-800: #9D174D;
+            --color-gray-900: #831843;
+            
+            /* Text colors */
+            --color-text: #831843;
+            --color-text-inverse: #FFFFFF;
+            --color-text-muted: #BE185D;
+            
+            /* Background colors */
+            --color-background: #FDF2F8;
+            --color-background-neutral: #FCE4EC;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #D81B60 0%, #F8BBD9 100%);
+            --gradient-secondary: linear-gradient(135deg, #EC407A 0%, #FCE4EC 100%);
+            
+            /* Typography */
+            --font-family-primary: "Raleway", sans-serif;
+            --font-family-secondary: "Lato", sans-serif;
+            --font-size-xs: 12px;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 24px;
+            --font-size-3xl: 30px;
+            --font-size-4xl: 36px;
+            --font-size-5xl: 48px;
+            --font-size-6xl: 60px;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            /* Spacing */
+            --spacing-1: 4px;
+            --spacing-2: 8px;
+            --spacing-3: 12px;
+            --spacing-4: 16px;
+            --spacing-6: 24px;
+            --spacing-8: 32px;
+            --spacing-12: 48px;
+            --spacing-16: 64px;
+            --spacing-20: 80px;
+            --spacing-24: 96px;
+            --spacing-32: 128px;
+            
+            /* Border radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(216, 27, 96, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(216, 27, 96, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(216, 27, 96, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+        
+        body {
+            font-family: var(--font-family-secondary);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--color-background);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: var(--spacing-2);
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+        }
+        
+        .aurora-text {
+            background: linear-gradient(45deg, var(--color-tertiary), var(--color-secondary), var(--color-primary));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: aurora 3s ease-in-out infinite;
+        }
+        
+        @keyframes aurora {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        .btn-primary {
+            background-color: var(--color-tertiary);
+            color: var(--color-text-inverse);
+            padding: var(--spacing-3) var(--spacing-6);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-normal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-tertiary-hover);
+            transform: scale(1.03);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            padding: var(--spacing-3) var(--spacing-6);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-normal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-secondary-hover);
+        }
+        
+        .card {
+            transition: transform 0.25s ease-in-out;
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+        }
+        
+        .nav-link {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: var(--font-weight-normal);
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nav-link:hover {
+            color: var(--color-tertiary);
+        }
+        
+        .carousel-slide {
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-nav {
+            background-color: var(--color-primary);
+            color: var(--color-text-inverse);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-lg);
+        }
+        
+        .carousel-nav:hover {
+            background-color: var(--color-primary-hover);
+        }
+        
+        /* Image Gallery Styles */
+        .gallery-section {
+            padding: var(--spacing-20) var(--spacing-8);
+            background-color: var(--color-background);
+        }
+        
+        .gallery-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .gallery-title {
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+            text-align: center;
+            margin-bottom: var(--spacing-12);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-6);
+            margin-bottom: var(--spacing-8);
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(216, 27, 96, 0.8) 0%, rgba(216, 27, 96, 0) 100%);
+            color: var(--color-text-inverse);
+            padding: var(--spacing-6);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            background: linear-gradient(to top, rgba(216, 27, 96, 0.9) 0%, rgba(216, 27, 96, 0.2) 100%);
+        }
+        
+        .gallery-overlay h3 {
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--spacing-2);
+        }
+        
+        .gallery-overlay p {
+            font-size: var(--font-size-sm);
+            opacity: 0.9;
+        }
+        
+        .gallery-cta {
+            text-align: center;
+            margin-top: var(--spacing-8);
+        }
+        
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(216, 27, 96, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInBg 0.4s;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--color-text-inverse);
+            font-size: var(--font-size-3xl);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--color-text-inverse);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: var(--font-size-xl);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .lightbox-nav:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        .lightbox-caption {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: var(--color-text-inverse);
+            font-size: var(--font-size-lg);
+        }
+        
+        /* Image Upload Section */
+        .image-upload-section {
+            padding: var(--spacing-12) var(--spacing-8);
+            background-color: var(--color-background-neutral);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-8) auto;
+            max-width: 1280px;
+        }
+        
+        .image-upload-title {
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+            text-align: center;
+            margin-bottom: var(--spacing-6);
+        }
+        
+        .upload-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-8);
+        }
+        
+        .upload-controls {
+            display: flex;
+            gap: var(--spacing-4);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .file-input-label {
+            display: inline-block;
+            padding: var(--spacing-3) var(--spacing-6);
+            background-color: var(--color-tertiary);
+            color: var(--color-text-inverse);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .file-input-label:hover {
+            background-color: var(--color-tertiary-hover);
+        }
+        
+        .image-preview-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--spacing-4);
+            margin-top: var(--spacing-6);
+        }
+        
+        .preview-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 4/3;
+        }
+        
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .preview-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            padding: var(--spacing-2);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .preview-item:hover .preview-actions {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .preview-btn {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-1) var(--spacing-2);
+            cursor: pointer;
+            font-size: var(--font-size-xs);
+        }
+        
+        .preview-btn:hover {
+            background: var(--color-primary-hover);
+        }
+        
+        .image-selector {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-3);
+            margin-top: var(--spacing-4);
+        }
+        
+        .selector-label {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text);
+        }
+        
+        .selector-dropdown {
+            padding: var(--spacing-2) var(--spacing-3);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-gray-300);
+            background-color: white;
+            color: var(--color-text);
+            font-family: var(--font-family-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: var(--font-size-lg);
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+            
+            .upload-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; background-color: var(--color-background); padding: var(--spacing-4) var(--spacing-8); display: flex; justify-content: space-between; align-items: center; min-height: 64px; box-shadow: var(--shadow-sm);">
+        <div style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-primary);">
+            Mabini Tourism
+        </div>
+        
+        <nav class="nav-menu" style="display: flex; gap: var(--spacing-8); align-items: center;">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#attractions" class="nav-link">Attractions</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#experiences" class="nav-link">Experiences</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div style="position: absolute; top: var(--spacing-4); right: var(--spacing-4); font-size: var(--font-size-2xl); cursor: pointer; color: var(--color-text);" onclick="toggleMobileMenu()">×</div>
+        <nav style="display: flex; flex-direction: column; gap: var(--spacing-6); text-align: center;">
+            <a href="#home" class="nav-link" style="padding: var(--spacing-4);" onclick="toggleMobileMenu()">Home</a>
+            <a href="#attractions" class="nav-link" style="padding: var(--spacing-4);" onclick="toggleMobileMenu()">Attractions</a>
+            <a href="#gallery" class="nav-link" style="padding: var(--spacing-4);" onclick="toggleMobileMenu()">Gallery</a>
+            <a href="#experiences" class="nav-link" style="padding: var(--spacing-4);" onclick="toggleMobileMenu()">Experiences</a>
+            <a href="#contact" class="nav-link" style="padding: var(--spacing-4);" onclick="toggleMobileMenu()">Contact</a>
+        </nav>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" style="position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; overflow: hidden;">
+        <div style="position: relative; width: 100%; height: 100%;">
+            <!-- REPLACE THIS VIDEO URL WITH YOUR OWN -->
+            <video
+                aria-label="mabini aerial view"
+                src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_1.mp4"
+                poster="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_1-poster.png"
+                style="width: 100%; height: 100%; object-fit: cover;"
+                autoplay
+                loop
+                muted
+                playsinline
+            ></video>
+            <div style="pointer-events: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(216, 27, 96, 0) 0%, rgba(216, 27, 96, 0.8) 100%);"></div>
+        </div>
+        
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; max-width: 800px; padding: 0 var(--spacing-4);">
+            <h1 style="font-family: var(--font-family-primary); font-size: var(--font-size-6xl); font-weight: var(--font-weight-bold); color: var(--color-text-inverse); margin-bottom: var(--spacing-6); line-height: 1.2;">
+                Discover <span class="aurora-text">Mabini</span>, Batangas
+            </h1>
+            <p style="font-size: var(--font-size-xl); color: var(--color-text-inverse); margin-bottom: var(--spacing-8); opacity: 0.9;">
+                Experience pristine beaches, world-class diving, and vibrant local culture.
+            </p>
+            <button class="btn-primary" onclick="document.getElementById('attractions').scrollIntoView({behavior: 'smooth'})">
+                Plan Your Visit
+            </button>
+        </div>
+    </section>
+    
+    <!-- Image Upload Section -->
+    <section class="image-upload-section">
+        <h2 class="image-upload-title">Upload and Preview Images</h2>
+        <div class="upload-container">
+            <div class="upload-controls">
+                <div class="file-input-wrapper">
+                    <label class="file-input-label">
+                        Upload New Image
+                        <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+                    </label>
+                </div>
+                
+                <div class="image-selector">
+                    <label class="selector-label">Replace existing image:</label>
+                    <select class="selector-dropdown" id="imageSelector">
+                        <option value="">Select an image to replace</option>
+                        <option value="coral-reef">Coral Reef Diving</option>
+                        <option value="mt-gulugod">Mt. Gulugod Baboy</option>
+                        <option value="beaches">Pristine Beaches</option>
+                        <option value="delicacies">Local Delicacies</option>
+                        <option value="sunset">Sunset View</option>
+                        <option value="island">Island Hopping</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="image-preview-container" id="imagePreviewContainer">
+                <!-- Preview items will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Attractions Carousel -->
+    <section id="attractions" style="padding: var(--spacing-20) var(--spacing-8); background-color: var(--color-background-neutral);">
+        <div style="max-width: 1280px; margin: 0 auto;">
+            <h2 style="font-family: var(--font-family-primary); font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--color-text); text-align: center; margin-bottom: var(--spacing-12);">
+                Top Attractions
+            </h2>
+            
+            <div style="position: relative; overflow: hidden; border-radius: var(--radius-lg);">
+                <div id="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+                    <!-- Slide 1: Coral Reef Diving -->
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                    <div class="carousel-slide" style="min-width: 100%; position: relative;">
+                        <img id="coral-reef-img" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_2.png" alt="coral reef diving" style="width: 100%; height: 500px; object-fit: cover;" loading="lazy">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(216, 27, 96, 0.8) 0%, rgba(216, 27, 96, 0) 100%); padding: var(--spacing-8); color: var(--color-text-inverse);">
+                            <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-2);">Diving Spots</h3>
+                            <p style="font-size: var(--font-size-base); margin-bottom: var(--spacing-4); opacity: 0.9;">Explore vibrant coral reefs and diverse marine life in crystal-clear waters.</p>
+                            <a href="#experiences" style="color: var(--color-secondary); text-decoration: none; font-weight: var(--font-weight-semibold);">Learn More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Mt. Gulugod Baboy -->
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                    <div class="carousel-slide" style="min-width: 100%; position: relative;">
+                        <img id="mt-gulugod-img" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_3.png" alt="mt gulugod baboy hike" style="width: 100%; height: 500px; object-fit: cover;" loading="lazy">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(216, 27, 96, 0.8) 0%, rgba(216, 27, 96, 0) 100%); padding: var(--spacing-8); color: var(--color-text-inverse);">
+                            <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-2);">Mt. Gulugod Baboy</h3>
+                            <p style="font-size: var(--font-size-base); margin-bottom: var(--spacing-4); opacity: 0.9;">Hike to breathtaking panoramic views and experience the beauty of nature.</p>
+                            <a href="#experiences" style="color: var(--color-secondary); text-decoration: none; font-weight: var(--font-weight-semibold);">Learn More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: Beaches -->
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                    <div class="carousel-slide" style="min-width: 100%; position: relative;">
+                        <img id="beaches-img" src="Anilao-Beach.jpg" alt="mabini beach shore" style="width: 100%; height: 500px; object-fit: cover;" loading="lazy">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(216, 27, 96, 0.8) 0%, rgba(216, 27, 96, 0) 100%); padding: var(--spacing-8); color: var(--color-text-inverse);">
+                            <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-2);">Pristine Beaches</h3>
+                            <p style="font-size: var(--font-size-base); margin-bottom: var(--spacing-4); opacity: 0.9;">Relax on soft sandy shores with turquoise waters and tropical paradise vibes.</p>
+                            <a href="#experiences" style="color: var(--color-secondary); text-decoration: none; font-weight: var(--font-weight-semibold);">Learn More →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4: Local Delicacies -->
+                    <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                    <div class="carousel-slide" style="min-width: 100%; position: relative;">
+                        <img id="delicacies-img" src="kakaning-pinoy.jpg" alt="kakanin" style="width: 100%; height: 500px; object-fit: cover;" loading="lazy">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(216, 27, 96, 0.8) 0%, rgba(216, 27, 96, 0) 100%); padding: var(--spacing-8); color: var(--color-text-inverse);">
+                            <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-2);">Local Delicacies</h3>
+                            <p style="font-size: var(--font-size-base); margin-bottom: var(--spacing-4); opacity: 0.9;">lomi and authentic Batangas cuisine that will delight your taste buds.</p>
+                            <a href="#experiences" style="color: var(--color-secondary); text-decoration: none; font-weight: var(--font-weight-semibold);">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <button class="carousel-nav" onclick="previousSlide()" style="position: absolute; left: var(--spacing-4); top: 50%; transform: translateY(-50%);">‹</button>
+                <button class="carousel-nav" onclick="nextSlide()" style="position: absolute; right: var(--spacing-4); top: 50%; transform: translateY(-50%);">›</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+            <h2 class="gallery-title">Mabini in Pictures</h2>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img id="gallery-coral-reef" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_2.png" alt="Coral Reef Diving" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Coral Reef Diving</h3>
+                        <p>Explore vibrant underwater ecosystems</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img id="gallery-mt-gulugod" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_3.png" alt="Mt. Gulugod Baboy" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Mt. Gulugod Baboy</h3>
+                        <p>Breathtaking panoramic mountain views</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img id="gallery-beaches" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_4.png" alt="Pristine Beaches" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Pristine Beaches</h3>
+                        <p>Soft sandy shores with turquoise waters</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img id="gallery-delicacies" src="https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_5.png" alt="Local Delicacies" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Local Delicacies</h3>
+                        <p>Authentic Batangas cuisine</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img id="gallery-sunset" src="sunset.jpg" alt="Sunset View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Stunning Sunsets</h3>
+                        <p>Beautiful evening skies over the ocean</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img id="gallery-island" src="island.jpg" alt="Island Hopping" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Island Hopping</h3>
+                        <p>Discover hidden gems around Mabini</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-cta">
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Plan Your Trip
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experiences" style="padding: var(--spacing-20) var(--spacing-8); background-color: var(--color-background-neutral);">
+        <div style="max-width: 1280px; margin: 0 auto;">
+            <h2 style="font-family: var(--font-family-primary); font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--color-text); text-align: center; margin-bottom: var(--spacing-12);">
+                Unforgettable Experiences
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-8);">
+                <!-- Adventure Card -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="card" style="background-color: var(--color-background); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer;" onclick="document.getElementById('attractions').scrollIntoView({behavior: 'smooth'})">
+                    <img id="exp-mt-gulugod" src="mt-gulugod-baboy.JPG" alt="mt gulugod baboy hike" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
+                    <div style="padding: var(--spacing-6);">
+                        <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--spacing-3);">Adventure Awaits</h3>
+                        <p style="color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.6;">Embark on thrilling hiking adventures with breathtaking mountain views and unforgettable memories.</p>
+                    </div>
+                </div>
+                
+                <!-- Diving Card -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="card" style="background-color: var(--color-background); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer;" onclick="document.getElementById('attractions').scrollIntoView({behavior: 'smooth'})">
+                    <img id="exp-diving" src="DIVING.jpg" alt="coral reef diving" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
+                    <div style="padding: var(--spacing-6);">
+                        <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--spacing-3);">Dive into Wonder</h3>
+                        <p style="color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.6;">Discover the underwater paradise with vibrant coral reefs and diverse marine life in crystal-clear waters.</p>
+                    </div>
+                </div>
+                
+                <!-- Food Card -->
+                <!-- REPLACE THIS IMAGE URL WITH YOUR OWN -->
+                <div class="card" style="background-color: var(--color-background); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer;" onclick="document.getElementById('attractions').scrollIntoView({behavior: 'smooth'})">
+                    <img id="exp-food" src="lomi-batangas-recipe-800x530.jpg" alt="batangas lomi" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
+                    <div style="padding: var(--spacing-6);">
+                        <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--spacing-3);">Taste Local Flavors</h3>
+                        <p style="color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.6;">Indulge in authentic Batangas cuisine and fresh seafood that showcases the rich culinary heritage of the region.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section style="padding: var(--spacing-20) var(--spacing-8); background-color: var(--color-background);">
+        <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: var(--font-family-primary); font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--color-text); margin-bottom: var(--spacing-3);">
+                Find Your Way to Paradise
+            </h2>
+            <p style="color: var(--color-text-muted); font-size: var(--font-size-lg); margin-bottom: var(--spacing-12);">
+                Located in the heart of Batangas, Mabini is easily accessible and waiting for your visit.
+            </p>
+            
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123780.35234567890!2d120.8567890!3d13.7567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd0123456789ab%3A0x123456789abcdef0!2sMabini%2C%20Batangas!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph&key=YOUR_API_KEY"
+                    style="width: 100%; height: 400px; border: none;"
+                    aria-label="Map showing location of Mabini, Batangas"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact" style="background-color: var(--color-primary); color: var(--color-text-inverse); padding: var(--spacing-16) var(--spacing-8) var(--spacing-8);">
+        <div style="max-width: 1280px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-8); margin-bottom: var(--spacing-12);">
+                <!-- Contact Info -->
+                <div>
+                    <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-4);">Contact Us</h3>
+                    <div style="space-y: var(--spacing-2);">
+                        <p style="color: var(--color-text-inverse); font-size: var(--font-size-base); margin-bottom: var(--spacing-2);">📍 Mabini, Batangas, Philippines</p>
+                        <p style="color: var(--color-text-inverse); font-size: var(--font-size-base); margin-bottom: var(--spacing-2);">📞 +63 123 456 7890</p>
+                        <p style="color: var(--color-text-inverse); font-size: var(--font-size-base); margin-bottom: var(--spacing-2);">✉️ info@exploremabini.ph</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-4);">Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-2);">
+                        <a href="#home" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-base); transition: color 0.3s ease;">Home</a>
+                        <a href="#attractions" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-base); transition: color 0.3s ease;">Attractions</a>
+                        <a href="#gallery" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-base); transition: color 0.3s ease;">Gallery</a>
+                        <a href="#experiences" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-base); transition: color 0.3s ease;">Experiences</a>
+                        <a href="#contact" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-base); transition: color 0.3s ease;">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h3 style="font-family: var(--font-family-primary); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-4);">Follow Us</h3>
+                    <div style="display: flex; gap: var(--spacing-4);">
+                        <a href="#" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-lg); transition: color 0.3s ease;">Facebook</a>
+                        <a href="#" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-lg); transition: color 0.3s ease;">Instagram</a>
+                        <a href="#" style="color: var(--color-text-inverse); text-decoration: none; font-size: var(--font-size-lg); transition: color 0.3s ease;">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: var(--spacing-8); text-align: center;">
+                <p style="color: var(--color-text-inverse); font-size: var(--font-size-sm);">
+                    © 2024 Explore Mabini. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">‹</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">›</button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Auto-play carousel
+        setInterval(nextSlide, 5000);
+        
+        // Update active nav link based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = ['home', 'attractions', 'gallery', 'experiences', 'contact'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        current = section;
+                    }
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.style.color = 'var(--color-text)';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = 'var(--color-tertiary)';
+                }
+            });
+        });
+        
+        // Lightbox functionality
+        const galleryImages = [
+            {
+                src: "https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_2.png",
+                alt: "Coral Reef Diving",
+                caption: "Explore vibrant underwater ecosystems with world-class diving spots"
+            },
+            {
+                src: "https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_3.png",
+                alt: "Mt. Gulugod Baboy",
+                caption: "Hike to breathtaking panoramic views of Mabini and surrounding areas"
+            },
+            {
+                src: "https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_4.png",
+                alt: "Pristine Beaches",
+                caption: "Relax on soft sandy shores with turquoise waters and tropical paradise vibes"
+            },
+            {
+                src: "https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_5.png",
+                alt: "Local Delicacies",
+                caption: "Indulge in authentic Batangas cuisine like lomi and fresh seafood"
+            },
+            {
+                src: "sunset.jpg",
+                alt: "Sunset View",
+                caption: "Witness beautiful evening skies over the ocean"
+            },
+            {
+                src: "island.jpg",
+                alt: "Island Hopping",
+                caption: "Discover hidden gems around Mabini through exciting island hopping tours"
+            }
+        ];
+        
+        let currentLightboxIndex = 0;
+        
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function changeLightboxImage(direction) {
+            currentLightboxIndex = (currentLightboxIndex + direction + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        }
+        
+        function updateLightbox() {
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = galleryImages[currentLightboxIndex].src;
+            lightboxImg.alt = galleryImages[currentLightboxIndex].alt;
+            lightboxCaption.textContent = galleryImages[currentLightboxIndex].caption;
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    changeLightboxImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeLightboxImage(1);
+                }
+            }
+        });
+        
+        // Image Upload and Preview Functionality
+        let uploadedImages = [];
+        
+        function previewImage(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageData = {
+                    id: Date.now(),
+                    src: e.target.result,
+                    name: file.name
+                };
+                
+                uploadedImages.push(imageData);
+                updateImagePreview();
+                
+                // If an image is selected for replacement, replace it
+                const selectedImage = document.getElementById('imageSelector').value;
+                if (selectedImage) {
+                    replaceImage(selectedImage, imageData.src);
+                }
+                
+                // Reset file input
+                event.target.value = '';
+            };
+            
+            reader.readAsDataURL(file);
+        }
+        
+        function updateImagePreview() {
+            const container = document.getElementById('imagePreviewContainer');
+            container.innerHTML = '';
+            
+            uploadedImages.forEach((image, index) => {
+                const previewItem = document.createElement('div');
+                previewItem.className = 'preview-item';
+                
+                previewItem.innerHTML = `
+                    <img src="${image.src}" alt="${image.name}">
+                    <div class="preview-actions">
+                        <button class="preview-btn" onclick="useImageInGallery(${index})">Use in Gallery</button>
+                        <button class="preview-btn" onclick="deleteImage(${index})">Delete</button>
+                    </div>
+                `;
+                
+                container.appendChild(previewItem);
+            });
+        }
+        
+        function deleteImage(index) {
+            uploadedImages.splice(index, 1);
+            updateImagePreview();
+        }
+        
+        function useImageInGallery(index) {
+            const imageSrc = uploadedImages[index].src;
+            const selectedImage = document.getElementById('imageSelector').value;
+            
+            if (selectedImage) {
+                replaceImage(selectedImage, imageSrc);
+            } else {
+                alert('Please select an image to replace from the dropdown first.');
+            }
+        }
+        
+        function replaceImage(imageId, newSrc) {
+            // Update all instances of the image across the website
+            const imageElements = document.querySelectorAll(`#${imageId}-img, #gallery-${imageId}, #exp-${imageId}`);
+            
+            imageElements.forEach(element => {
+                if (element) {
+                    element.src = newSrc;
+                }
+            });
+            
+            // Update lightbox images if applicable
+            const imageMap = {
+                'coral-reef': 0,
+                'mt-gulugod': 1,
+                'beaches': 2,
+                'delicacies': 3,
+                'sunset': 4,
+                'island': 5
+            };
+            
+            if (imageMap[imageId] !== undefined) {
+                galleryImages[imageMap[imageId]].src = newSrc;
+            }
+            
+            alert(`Image replaced successfully!`);
+        }
+        
+        // Initialize with some example uploaded images
+        window.onload = function() {
+            // Add some example images to the preview
+            uploadedImages = [
+                {
+                    id: 1,
+                    src: 'https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_2.png',
+                    name: 'Coral Reef Diving'
+                },
+                {
+                    id: 2,
+                    src: 'https://c.animaapp.com/mfm93mxzbFmLlZ/img/ai_3.png',
+                    name: 'Mt. Gulugod Baboy'
+                }
+            ];
+            updateImagePreview();
+        };
+    </script>
+</body>
+</html>
